@@ -1,0 +1,104 @@
+:root {
+    --mainColor: orange;
+    --secColor: #1e293b;
+    --thirdColor: #777;
+    --bgColor: #eee;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+:root.dark-mode {
+    --bgColor: rgb(30 41 59);
+    --mainColor: rgb(241 245 249);
+    --secColor: rgb(241 245 249);
+    --thirdColor: rgb(241 245 249);
+}
+
+section {
+    background-color: var(--bgColor);
+    padding: 88px;
+    height: 100vh;
+
+    .moon {
+        font-size: 30px;
+        direction: rtl;
+        display: flex;
+        justify-self: flex-end;
+        margin-bottom: 40px;
+        cursor: pointer;
+        color: var(--secColor);
+    }
+
+    .desc {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+    
+        .info {
+            max-width: 510px;
+            span {
+                text-transform: uppercase;
+                color: var(--thirdColor);
+            }
+            h1 {
+                margin: 20px 0;
+                color: var(--mainColor);
+                font-size: 40px;
+                font-weight: bold;
+            }
+            p {
+                margin-bottom: 20px;
+                font-size: 20px;
+                line-height: 1.5;
+                color: var(--secColor);
+            }
+            .icons {
+                display: flex;
+                gap: 16px;
+
+            a {
+                color: var(--secColor);
+                font-size: 24px;
+                }
+            }
+        }
+        img {
+            max-width: 448px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    section {
+        padding: 16px;
+
+        .moon {
+            margin-bottom: 16px;
+        }
+
+        .desc {
+            padding: 16px;
+            flex-direction: column;
+
+            h1 {
+                font-size: 30px;
+                margin-bottom: 16px;
+                margin-top: 16px;
+            }
+            p {
+                margin-bottom: 16px;
+                font-size: 16px;
+            }
+            img {
+                max-width: 100% ; 
+            }   
+        }
+    }
+    
+}
